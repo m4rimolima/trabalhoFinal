@@ -49,9 +49,9 @@ if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['user
     <div class="signUpBox">
     <h2 class="signUpLabel">SIGN IN </h2>
         <form action="" method="POST">
-            <input type="email" name="email" placeholder="EMAIL" class="inputBox"/><br><br>
-            <input type="password" name="password" placeholder="PASSWORD" class="inputBox" /><br><br>
-            <input type="text" name="username" placeholder="USERNAME" class="inputBox"/><br><br>
+            <input type="email" name="email" placeholder="EMAIL" class="inputBox inputs"/><br><br>
+            <input type="password" name="password" placeholder="PASSWORD" class="inputBox inputs" /><br><br>
+            <input type="text" name="username" placeholder="USERNAME" class="inputBox inputs"/><br><br>
             <button type="submit" class="buttonSign">SIGN IN</button>
         </form>
     </div>

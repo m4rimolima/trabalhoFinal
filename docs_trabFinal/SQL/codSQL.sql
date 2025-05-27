@@ -1,0 +1,33 @@
+
+USE tela_de_login;
+
+CREATE TABLE Usuario (
+    ID_Usuario INT PRIMARY KEY AUTO_INCREMENT,
+    Nome_Usuario VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Senha VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Livro (
+    ID_Livro INT PRIMARY KEY AUTO_INCREMENT,
+    Titulo VARCHAR(255) NOT NULL,
+    Autor VARCHAR(255) NOT NULL,
+    Categoria VARCHAR(255) NOT NULL,
+    Numero_Paginas INT NOT NULL
+);
+
+CREATE TABLE Status_Leitura (
+    ID_Status INT PRIMARY KEY AUTO_INCREMENT,
+    Descricao_Status VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Biblioteca_Usuario (
+    ID_Biblioteca INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Usuario INT NOT NULL,
+    ID_Livro INT NOT NULL,
+    ID_Status INT NOT NULL,
+
+    FOREIGN KEY (ID_Usuario) REFERENCES Usuario(ID_Usuario) ON DELETE CASCADE,
+    FOREIGN KEY (ID_Livro) REFERENCES Livro(ID_Livro) ON DELETE CASCADE,
+    FOREIGN KEY (ID_Status) REFERENCES Status_Leitura(ID_Status) ON DELETE CASCADE
+);
