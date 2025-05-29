@@ -55,9 +55,9 @@ exit;
     <div class="signUpBox">
         <h2 class="signUpLabel" onclick="window.location.href='homepage.php'">SIGN UP</h2>
         <form method="post">
-            <input type="text" name="username" placeholder="USERNAME" required  class="inputBox"/><br>
-            <input type="email" name="email" placeholder="EMAIL" required class="inputBox"/><br>
-            <input type="password" name="password" placeholder="PASSWORD" required class="inputBox"/><br>
+            <input type="text" name="username" placeholder="USERNAME" required  class="inputBox inputs"/><br>
+            <input type="email" name="email" placeholder="EMAIL" required class="inputBox inputs"/><br>
+            <input type="password" name="password" placeholder="PASSWORD" required class="inputBox inputs"/><br>
             <button type="submit" class="buttonSign">SIGN UP</button>
         </form>
     </div> 
