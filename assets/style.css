@@ -131,7 +131,10 @@
     font-weight: bold;
 }
 
-.inputs{
-    color: #dcd4f2;
-}
 
+.labels{
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+    color: #dcd4f2
+}

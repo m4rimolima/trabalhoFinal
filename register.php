@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$database = 'tela_de_login';
+$database = 'ultraviolet_bd';
 $user = 'root';
-$pass = '01102014@Jm';
+$pass = '';
 
 try {
     $conexao = new PDO("mysql:host=$host;dbname=$database;charset=utf8mb4",
@@ -55,9 +55,12 @@ exit;
     <div class="signUpBox">
         <h2 class="signUpLabel" onclick="window.location.href='homepage.php'">SIGN UP</h2>
         <form method="post">
-            <input type="text" name="username" placeholder="USERNAME" required  class="inputBox inputs"/><br>
-            <input type="email" name="email" placeholder="EMAIL" required class="inputBox inputs"/><br>
-            <input type="password" name="password" placeholder="PASSWORD" required class="inputBox inputs"/><br>
+            <label class="labels">NAME</label>
+            <input type="text" name="username" required  class="inputBox"/><br>
+            <label class="labels">EMAIL</label>
+            <input type="email" name="email" required class="inputBox "/><br>
+            <label class="labels">PASSWORD</label>
+            <input type="password" name="password" required class="inputBox "/><br>
             <button type="submit" class="buttonSign">SIGN UP</button>
         </form>
     </div> 
