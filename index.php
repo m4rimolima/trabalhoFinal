@@ -61,9 +61,9 @@ if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['user
         <button type="button" onclick="window.location.href='register.php'" class="signupText">
         DON'T HAVE AN ACCOUNT? SIGN UP
         </button>
-    </div>
-       <div>
+
         <img src="assets/images/loginBanner.png" class="loginBanner" />
     </div>
+
 </body>
 </html>

@@ -23,5 +23,11 @@ if (!isset($_SESSION['id'])) {
     <p>We're so sorry, but this page isn't ready yet!</p>
     <br><br>
     <a href="logout.php" class="logoutButton">Logout</a>
+    <a href="addbooks.php">
+        <button type="button">Cadastrar Novo Livro</button>
+    </a>
+
+</form>
+
 </body>
 </html>
