@@ -1,19 +1,17 @@
 <?php
-$host = 'localhost';
+$host = '127.0.0.1';
 $database = 'ultraviolet_bd';
 $user = 'root';
 $pass = '';
+$port = '3307';
 
 try {
-    $conexao = new PDO("mysql:host=$host;dbname=$database;charset=utf8mb4",
-        $user, $pass, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-    ]);
+    $conexao = new PDO("mysql:host=$host;port=3307;dbname=$database;charset=utf8mb4",$user,$pass,[
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ]);
 } catch (PDOException $erro) {
     die("Database connection error: " . $erro->getMessage());
 }
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $email = $_POST['email'] ?? '';

@@ -24,8 +24,8 @@
             <td><?php echo htmlspecialchars($book['pages_books']); ?></td>
             <td><?php echo htmlspecialchars($book['category_books']); ?></td>
             <td>
-                <a href="updatebooks.php?id=<?php $book['id_books'] ?>">Edit</a> |
-                <a href="deletebooks.php?id=<?php $book['id_books'] ?>" onclick="return confirm('delete book?')">Delete</a>
+                <a href="updatebooks.php?id=<?php echo $book['id_books']; ?>">Edit</a> |
+                <a href="deletebooks.php?id=<?php echo $book['id_books']; ?>" onclick="return confirm('delete book?')">Delete</a>
             </td>
         </tr>
     <?php endforeach; ?>
