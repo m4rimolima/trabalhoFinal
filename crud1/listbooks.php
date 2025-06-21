@@ -3,6 +3,18 @@
 include '../conexao.php';
 include '../includes/menu.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet
+    <title>Document</title>
+</head>
+<body>
+    
+
 <table border="1">
 <tr>
     <th>ID</th>
@@ -13,6 +25,8 @@ include '../includes/menu.php';
     <th>CATEGORY</th>
     <th>ACTIONS</th>
 </tr>
+</body>
+</html>
 <?php
 $stmt = $pdo->query(
     "SELECT 

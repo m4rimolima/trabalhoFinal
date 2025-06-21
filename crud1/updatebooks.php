@@ -46,6 +46,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmtCategories = $pdo->query("SELECT id_category, category_name FROM category");
             $categories = $stmtCategories->fetchAll(PDO::FETCH_ASSOC);
         ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
 
 <h2>Editar Livro</h2>
 <form method="post">
@@ -72,3 +81,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </form>
 <br>
 <a href="listbooks.php">Voltar</a>
+</body>
+</html>

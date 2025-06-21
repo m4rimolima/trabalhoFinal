@@ -16,6 +16,15 @@ try {
     $categories = []; 
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
 
 <h2>Lista de Categorias</h2>
 <a href="addcategory.php">Nova Categoria</a>
@@ -39,3 +48,5 @@ try {
     <?php endforeach; ?>
 </table>
     <a href="/trabalhofinal/crud1/listbooks.php">Voltar para a lista de livros</a>
+</body>
+</html>

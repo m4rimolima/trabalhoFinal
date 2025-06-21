@@ -29,6 +29,17 @@ if (isset($_GET['id'])) {
     exit;
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet
+    <title>Document</title>
+</head>
+<body>
+    
 
 <h2>Editar Categoria</h2>
 <form action="updatecategory.php" method="POST">
@@ -37,3 +48,5 @@ if (isset($_GET['id'])) {
     Descrição: <input type="text" name="description" value="<?= htmlspecialchars($category['category_description']) ?>" required><br>
     <button type="submit">Atualizar</button>
 </form>
+</body>
+</html>
