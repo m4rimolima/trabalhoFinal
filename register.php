@@ -1,6 +1,6 @@
 <?php
 $host = '127.0.0.1';
-$database = 'ultraviolet_bd';
+$database = 'ultraviolet';
 $user = 'root';
 $pass = '';
 $port = '3307';

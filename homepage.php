@@ -1,10 +1,6 @@
 
 <?php
-session_start();
-if (!isset($_SESSION['id'])) {
-    header("Location: index.php");
-    exit;
-}
+include 'includes/menu.php';
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +19,7 @@ if (!isset($_SESSION['id'])) {
     <p>We're so sorry, but this page isn't ready yet!</p>
     <br><br>
     <a href="logout.php" class="logoutButton">Logout</a>
-    <a href="addbooks.php">
+    <a href="/trabalhofinal/crud1/listbooks.php">
         <button type="button">Cadastrar Novo Livro</button>
     </a>
 
