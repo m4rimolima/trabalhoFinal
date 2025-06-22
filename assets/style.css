@@ -40,12 +40,15 @@
 
 .inputBox {
     margin-bottom: 15px;
+    margin-top: 10px;
     text-align: left;
     width: 100%;
     padding: 8px 12px;
     border: 3px solid #9a85c9;
     border-radius: 8px;
     background-color: transparent;
+    color:#bab4ee;
+    font-size: medium;
 }
 
 
@@ -92,7 +95,7 @@
     width: auto;
     object-fit: cover;
     z-index: 10;
-    pointer-events: none; /* não interfere com cliques */
+    pointer-events: none; 
 }
 
 
@@ -174,4 +177,54 @@
 
 .buttonaddbook:hover {
     background: linear-gradient(to right, #9580cf, #525370);
+}
+
+.editLabel {
+    color: #dcd4f2;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-left:106px ;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+
+.buttonedit {
+    margin-top: 10px;
+    width: 95px ;
+    padding: 10px;
+    background: linear-gradient(to right, #a89ccf, #716c99);
+    border: none;
+    border-radius: 8px;
+    color: #1c1230;
+    font-weight: bolder;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.button:hover {
+    background: linear-gradient(to right, #9580cf, #525370);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.bodyedit {
+    background-color: #241939;
+    height: 100vh ;
+    display: flex ;
+    box-shadow: 0 0 10px #00000070 ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: flex-start ;
+    padding-left: 450px ;
 }

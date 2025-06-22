@@ -92,7 +92,7 @@
     width: auto;
     object-fit: cover;
     z-index: 10;
-    pointer-events: none; /* não interfere com cliques */
+    pointer-events: none; 
 }
 
 
@@ -174,4 +174,16 @@
 
 .buttonaddbook:hover {
     background: linear-gradient(to right, #9580cf, #525370);
+}
+
+
+.bodyedit {
+    background-color: #241939;
+    height: 100vh ;
+    display: flex ;
+    box-shadow: 0 0 10px #00000070 ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: flex-start ;
+    padding-left: 500px ;
 }

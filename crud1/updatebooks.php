@@ -3,8 +3,6 @@ include '../conexao.php';
 include '../includes/menu.php';
 
 $id_books = $_GET['id'];
-// $id_category não está sendo usado no PHP, pode remover se quiser
-// $id_category = $_GET['id_category'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
@@ -56,41 +54,45 @@ $categories = $stmtCategories->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Editar Livro</title>
+    <title>EDIT BOOK</title>
     <link rel="stylesheet" href="/trabalhofinal/assets/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
 </head>
-<body class="bodySignUp">
+<body class="bodyedit">
+<
+<h2 class="editLabel">EDIT BOOK</h2>
 
-<h2 class="">EDIT BOOK</h2>
-<form method="post">
-    <label> TITLE:</label>
-    <input type="text" name="title" value="<?php echo htmlspecialchars($book['title_books']); ?>" required />
+<div class="signUpBox">
+    <form method="post">
+        <label class="labels"> TITLE:</label>
+        <input class="inputBox" type="text" name="title" value="<?php echo htmlspecialchars($book['title_books']); ?>" required />
 
-    <label> AUTHOR:</label>
-    <input type="text" name="author" value="<?php echo htmlspecialchars($book['author_books']); ?>" required />
+        <label class="labels"> AUTHOR:</label>
+        <input class="inputBox" type="text" name="author" value="<?php echo htmlspecialchars($book['author_books']); ?>" required />
 
-    <label> PUBLISHING DATES:</label>
-    <input type="text" name="dates" value="<?php echo htmlspecialchars($book['date_books']); ?>" required />
+        <label class="labels"> PUBLISHING DATES:</label>
+        <input class="inputBox" type="text" name="dates" value="<?php echo htmlspecialchars($book['date_books']); ?>" required />
 
-    <label> NUMBER OF PAGES:</label>
-    <input type="text" name="pages" value="<?php echo htmlspecialchars($book['pages_books']); ?>" required />
+        <label class="labels"> NUMBER OF PAGES:</label>
+        <input class="inputBox" type="text" name="pages" value="<?php echo htmlspecialchars($book['pages_books']); ?>" required />
 
-    <label> CATEGORY:</label>
-    <select name="category" required>
-        <?php foreach ($categories as $category): ?>
-            <option value="<?php echo $category['id_category']; ?>" 
-                <?php if ($category['id_category'] == $book['id_category']) echo 'selected'; ?>>
-                <?php echo htmlspecialchars($category['category_name']); ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
-
-    <button type="submit">Salvar alterações</button>
-</form>
-
+        <label class="labels"> CATEGORY:</label>
+        <select class="inputBox" name="category" required>
+            <?php foreach ($categories as $category): ?>
+                <option  value="<?php echo $category['id_category']; ?>" 
+                    <?php if ($category['id_category'] == $book['id_category']) echo 'selected'; ?>>
+                    <?php echo htmlspecialchars($category['category_name']); ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+<br>
+        <div class="button-container">
+            <button type="submit" class="buttonedit">SAVE CHANGES</button>
+        </div>
+    </form>
+</div>
 <br />
 <a href="listbooks.php">Voltar</a>
-
+<img src="/trabalhofinal/assets/images/loginBanner.png" class="loginBanner" />
 </body>
 </html>
