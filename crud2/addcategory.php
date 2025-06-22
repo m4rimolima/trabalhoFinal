@@ -1,7 +1,6 @@
 <?php
 include '../conexao.php';
-include '../includes/menu.php';
-
+include '../includes/menu.php'; ?>
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? '';
     $description = $_POST['description'] ?? '';
@@ -13,33 +12,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: listcategory.php");
         exit;
     } else {
-        $error = "Preencha todos os campos!";
+        $error = "Fill all fields!";
     }
 }
 ?>
 
-<h2>Nova Categoria</h2>
-
-<?php if (isset($error)): ?>
-    <p style="color:red;"><?= $error ?></p>
-<?php endif; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/trabalhofinal/assets/category.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <title>ADD CATEGORY</title>
 </head>
-<body>
-    
+<body class="bodySignUp">
 
-<form action="addcategory.php" method="POST">
-    Nome: <input type="text" name="name" required><br>
-    Descrição: <input type="text" name="description" required><br>
-    <button type="submit">Salvar</button>
-</form>
-</body>
-</html>
 
+    <div class="addbooksLabel">
+        <h2 >ADD NEW CATEGORY</h2>
+    </div>
+
+    <?php if (isset($error)): ?>
+        <p style="color:red; text-align:center;"><?= htmlspecialchars($error) ?></p>
+    <?php endif; ?>
+
+    <form action="addcategory.php" method="POST">
+        <label for="name">CATEGORY NAME</label><br />
+        <input type="text" name="name" id="name" required autocomplete="off" /><br />
+
+        <label for="description">DESCRIPTION</label><br />
+        <input type="text" name="description" id="description" requi

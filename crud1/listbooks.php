@@ -1,20 +1,23 @@
 
 <?php
 include '../conexao.php';
-include '../includes/menu.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/trabalhofinal/assets/style.css">
+    <link rel="stylesheet" href="/trabalhofinal/assets/list.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body class="bodySignUp">
-    
-
+<?php
+include '../includes/menu.php';
+?>
+<a href="addbooks.php" class="buttonaddbooks"> ADD NEW BOOK</a> 
+ 
 <table border="1">
 <tr>
     <th>ID</th>
@@ -58,5 +61,5 @@ foreach ($books as $book):
     </tr>
 <?php endforeach; ?>
 </table>
-    <a href="addbooks.php"> novo livro</a>
+
 
