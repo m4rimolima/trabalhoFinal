@@ -1,17 +1,6 @@
 <?php
-$host = '127.0.0.1';
-$database = 'ultraviolet';
-$user = 'root';
-$pass = '';
-$port = '3307';
-
-try {
-    $conexao = new PDO("mysql:host=$host;port=3307;dbname=$database;charset=utf8mb4",$user,$pass,[
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ]);
-} catch (PDOException $erro) {
-    die("Database connection error: " . $erro->getMessage());
-}
+session_start();
+include('conexao.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $email = $_POST['email'] ?? '';
@@ -20,9 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username && $email && $password) {
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         try {
-            $stmt = $conexao->prepare("INSERT INTO user (user_name, user_email, user_password) VALUES (?, ?, ?)");
+            $stmt = $pdo->prepare("INSERT INTO user (user_name, user_email, user_password) VALUES (?, ?, ?)");
             $stmt->execute([$username, $email, $passwordHash]);
             echo '<div class="message"> "Registered successfully!"</div>';
+            $_SESSION['name']= $username;
             header("Location: homepage.php");
 exit;
 

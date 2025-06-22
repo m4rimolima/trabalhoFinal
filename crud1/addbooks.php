@@ -38,39 +38,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/trabalhofinal/assets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>REGISTER NEW BOOK</title>
 </head>
 <body class="bodySignUp">
 
-    <h2 class="signUpLabel">ADD NEW BOOK</h2>
+    <h2 class="addbooksLabel">ADD NEW BOOK</h2>
     <div class="signUpBox">
     <form method="post" action="addbooks.php">
-        <label>TITLE</label>
+        <label class="labels">TITLE</label>
         <input type="text" name="title" required class="inputBox"><br>
 
-        <label>AUTHOR</label>
+        <label class="labels">AUTHOR</label>
         <input type="text" name="author" required class="inputBox"><br>
 
-        <label>PUBLISHING DATE</label>
+        <label class="labels">PUBLISHING DATE</label>
         <input type="date" name="dates" required class="inputBox"><br>
 
-        <label>NUMBER OF PAGES</label>
+        <label class="labels">NUMBER OF PAGES</label>
         <input type="number" name="pages" required class="inputBox"><br>
 
-        <label for="category">Categoria:</label>
+        <label for="category" class="labels">CATEGORY</label>
             <select name="id_category" id="category" required class="inputBox">
-                <option value="">Selecione uma categoria</option>
+                <option value="">SELECT A CATEGORY</option>
                 <?php foreach ($categories as $category): ?>
                     <option value="<?= $category['id_category'] ?>">
                         <?= htmlspecialchars($category['category_name']) ?>
                     </option>
                 <?php endforeach; ?>
             </select>
-    <button type="submit" class="buttonSign">ADD NEW BOOK</button> 
+    <button type="submit" class="buttonaddbook">ADD NEW BOOK</button> 
     </form></div>
     <a href="/trabalhofinal/crud2/addcategory.php" class="signupText"> Category doesn't exist? create one.</a><br>
-    <a href="listbooks.php" class="signupText">Voltar para a lista</a>
+    <a href="listbooks.php" class="signupText">Back to list.</a>
    <img src="/trabalhofinal/assets/images/loginBanner.png" class="loginBanner" />
 
 </body>

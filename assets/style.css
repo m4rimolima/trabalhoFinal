@@ -6,14 +6,14 @@
 }
 
 .bodySignUp {
-    background-color: #241939 !important;
-    height: 100vh !important;
-    display: flex !important;
-    box-shadow: 0 0 10px #00000070 !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    padding-left: 300px !important;
+    background-color: #241939;
+    height: 100vh ;
+    display: flex ;
+    box-shadow: 0 0 10px #00000070 ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: flex-start ;
+    padding-left: 300px ;
 }
 
 
@@ -25,7 +25,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px #00000070;
     width: 350px;
-    text-align: center;
+    
 }
 
 .signUpLabel {
@@ -33,7 +33,6 @@
     margin-bottom: 20px;
     font-weight: bolder;
     letter-spacing: 1px;
-
 
 }
 
@@ -140,4 +139,34 @@
     align-items: flex-start;
     font-weight: bold;
     color: #dcd4f2
+}
+
+.addbooksLabel {
+    color: #dcd4f2;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-left: 80px;
+}
+
+
+.buttonaddbook {
+    margin-top: 10px;
+    width: 95px ;
+    padding: 10px;
+    background: linear-gradient(to right, #a89ccf, #716c99);
+    border: none;
+    border-radius: 8px;
+    color: #1c1230;
+    font-weight: bolder;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonaddbook:hover {
+    background: linear-gradient(to right, #9580cf, #525370);
 }

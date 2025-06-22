@@ -62,10 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <form action="" method="POST">
-            <input type="email" name="email" placeholder="EMAIL" class="inputBox inputs" required
+            <label class="labels">EMAIL</label>
+            <input type="email" name="email" class="inputBox inputs" required
                 value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" /><br><br>
-
-            <input type="password" name="password" placeholder="PASSWORD" class="inputBox inputs" required /><br><br>
+            <label class="labels">PASSWORD</label>
+            <input type="password" name="password" class="inputBox inputs" required /><br><br>
 
             <button type="submit" class="buttonSign">SIGN IN</button>
         </form>
