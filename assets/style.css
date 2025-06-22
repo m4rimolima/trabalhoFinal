@@ -228,3 +228,12 @@
     align-items: flex-start ;
     padding-left: 450px ;
 }
+
+
+.addcategoryLabel {
+    color: #dcd4f2;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-left: 45px;
+}
