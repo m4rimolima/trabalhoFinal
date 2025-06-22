@@ -1,6 +1,7 @@
 
 <?php
-include 'includes/menu.php';
+session_start();
+// include('protect.php');
 ?>
 
 <!DOCTYPE html>

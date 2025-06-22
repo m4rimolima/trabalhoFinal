@@ -6,15 +6,17 @@
 }
 
 .bodySignUp {
-    background-color: #241939;
-    height: 100vh;
-    display: flex;
-    box-shadow: 0 0 10px #00000070;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 300px;    
+    background-color: #241939 !important;
+    height: 100vh !important;
+    display: flex !important;
+    box-shadow: 0 0 10px #00000070 !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding-left: 300px !important;
 }
+
+
 
 
 .signUpBox {
@@ -77,6 +79,7 @@
     flex-direction: column;
     margin-left: 15px;
     font-size: large;
+    text-decoration: none;
 
 }
 
