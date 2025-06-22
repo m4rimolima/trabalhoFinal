@@ -45,28 +45,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <h2 class="addbooksLabel">ADD NEW BOOK</h2>
     <div class="signUpBox">
-    <form method="post" action="addbooks.php">
-        <label class="labels">TITLE</label>
-        <input type="text" name="title" required class="inputBox"><br>
+        <label for="title" class="labels">TITLE</label>
+        <input type="text" name="title" id="title" required class="inputBox"><br>
 
-        <label class="labels">AUTHOR</label>
-        <input type="text" name="author" required class="inputBox"><br>
+        <label for="author" class="labels">AUTHOR</label>
+        <input type="text" name="author" id="author" required class="inputBox"><br>
 
-        <label class="labels">PUBLISHING DATE</label>
-        <input type="date" name="dates" required class="inputBox"><br>
+        <label for="dates" class="labels">PUBLISHING DATE</label>
+        <input type="date" name="dates" id="dates" required class="inputBox"><br>
 
-        <label class="labels">NUMBER OF PAGES</label>
-        <input type="number" name="pages" required class="inputBox"><br>
+        <label for="pages" class="labels">NUMBER OF PAGES</label>
+        <input type="number" name="pages" id="pages" required class="inputBox"><br>
 
         <label for="category" class="labels">CATEGORY</label>
-            <select name="id_category" id="category" required class="inputBox">
-                <option value="">SELECT A CATEGORY</option>
-                <?php foreach ($categories as $category): ?>
-                    <option value="<?= $category['id_category'] ?>">
-                        <?= htmlspecialchars($category['category_name']) ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
+        <select name="id_category" id="category" required class="inputBox">
+            <option value="" class="labels">SELECT A CATEGORY</option>
+            <?php foreach ($categories as $category): ?>
+                <option value="<?= $category['id_category'] ?>">
+                    <?= htmlspecialchars($category['category_name']) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+<button type="submit" class="buttonaddbook">ADD NEW BOOK</button> 
+</form></div>
+
+<a href="/trabalhofinal/crud2/addcategory.php" class="signupText">Category doesn't exist? Create one.</a><br>
+<a href="listbooks.php" class="signupText">Back to list.</a>
+
+<img src="/trabalhofinal/assets/images/loginBanner.png" class="loginBanner" />
+
     <button type="submit" class="buttonaddbook">ADD NEW BOOK</button> 
     </form></div>
     <a href="/trabalhofinal/crud2/addcategory.php" class="signupText"> Category doesn't exist? create one.</a><br>
