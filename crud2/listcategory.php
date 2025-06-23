@@ -21,13 +21,17 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/trabalhofinal/assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <title>CATEGORIES</title>
 </head>
 <body>
-    
-
-<h2>Lista de Categorias</h2>
-<a href="addcategory.php">Nova Categoria</a>
+    <h2 class="editLabel">EDIT CATEGORY</h2>
+ <br>
+ <div class="cruds">
+    <a class="buttonadd" href="/trabalhofinal/crud1/addbooks.php">NEW BOOK</a>
+    <a class="buttonadd"href="addcategory.php">NEW CATEGORY</a>
+</div>
 <table border="1">
     <tr>
         <th>ID</th>
@@ -47,6 +51,6 @@ try {
         </tr>
     <?php endforeach; ?>
 </table>
-    <a href="/trabalhofinal/crud1/listbooks.php">Voltar para a lista de livros</a>
+    
 </body>
 </html>

@@ -319,14 +319,13 @@ select:focus {
 }
 
 table {
-    width: 97%;
+    width: 1660px;
     border-collapse: collapse;
     background-color: #2e1d55;
     overflow: hidden;
-    color: #ffffff;
     font-size: 0.9rem;
-    margin-top: 20px;
-    margin-left: 25px;
+    margin-top: -5px;
+    margin-left: -279px;
 
 }
 
@@ -393,14 +392,17 @@ a {
 
 
 .cruds {
-    margin: 20px 0;
     display: flex;
     gap: 10px;
     background-color: #4f4a77;
     padding-top: -20px;
     display: flex;
     padding-bottom: 10px;
-    margin-top: -23px
+    width:1705px;
+    margin-top: -535px;
+    margin-left: -300px;
+    margin-bottom: 20px;
+
 
 }
 

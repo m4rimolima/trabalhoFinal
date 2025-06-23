@@ -59,7 +59,7 @@ $categories = $stmtCategories->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
 </head>
 <body class="bodyedit">
-<
+
 <h2 class="editLabel">EDIT BOOK</h2>
 
 <div class="signUpBox">

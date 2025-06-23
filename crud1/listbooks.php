@@ -1,6 +1,7 @@
 
 <?php
 include '../conexao.php';
+include '../includes/menu.php';
 
 ?>
 <!DOCTYPE html>
@@ -8,15 +9,16 @@ include '../conexao.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/trabalhofinal/assets/list.css">
+    <link rel="stylesheet" href="/trabalhofinal/assets/list2.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>LIST BOOKS</title>
 </head>
 <body class="bodySignUp">
-<?php
-include '../includes/menu.php';
-?>
-<a href="addbooks.php" class="buttonaddbooks"> ADD NEW BOOK</a> 
+<br>
+<div class="cruds">
+    <a class="buttonadd" href="/trabalhofinal/crud1/addbooks.php">NEW BOOK</a>
+    <a class="buttonadd"href="addcategory.php">NEW CATEGORY</a>
+</div>
  
 <table border="1">
 <tr>
