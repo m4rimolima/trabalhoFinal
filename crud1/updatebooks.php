@@ -92,7 +92,7 @@ $categories = $stmtCategories->fetchAll(PDO::FETCH_ASSOC);
     </form>
 </div>
 <br />
-<a href="listbooks.php">Voltar</a>
+<a href="/trabalhofinal/crud2/listbooks.php" class="voltar">Go back</a>
 <img src="/trabalhofinal/assets/images/loginBanner.png" class="loginBanner" />
 </body>
 </html>

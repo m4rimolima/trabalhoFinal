@@ -21,32 +21,45 @@ if (isset($_GET['id'])) {
     $category = $stmt->fetch();
 
     if (!$category) {
-        echo "Categoria não encontrada.";
+        echo "Category not found.";
         exit;
     }
 } else {
-    echo "ID não informado.";
+    echo "ID is not defined.";
     exit;
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPDATE CATEGORY</title>
+    <link rel="stylesheet" href="/trabalhofinal/assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
 </head>
-<body>
-    
+<body class="bodyedit">
 
-<h2>Editar Categoria</h2>
-<form action="updatecategory.php" method="POST">
-    <input type="hidden" name="id" value="<?= $category['id_category'] ?>">
-    Nome: <input type="text" name="name" value="<?= htmlspecialchars($category['category_name']) ?>" required><br>
-    Descrição: <input type="text" name="description" value="<?= htmlspecialchars($category['category_description']) ?>" required><br>
-    <button type="submit">Atualizar</button>
-</form>
+    <h2 class="editLabel">EDIT CATEGORY</h2>
+
+    <div class="signUpBox">
+        <form action="updatecategory.php" method="POST">
+            <input type="hidden" name="id" value="<?= $category['id_category'] ?>">
+
+            <label class="labels">Nome:</label>
+            <input class="inputBox" type="text" name="name" value="<?= htmlspecialchars($category['category_name']) ?>" required />
+
+            <label class="labels">Descrição:</label>
+            <input class="inputBox" type="text" name="description" value="<?= htmlspecialchars($category['category_description']) ?>" required />
+
+            <div class="button-container">
+                <button type="submit" class="buttonedit">SAVE CHANGES</button>
+            </div>
+        </form>
+    </div>
+
+    <br />
+    <a href="listcategory.php" class="voltar">Go back</a>
+    <img src="/trabalhofinal/assets/images/loginBanner.png" class="loginBanner" />
 </body>
 </html>

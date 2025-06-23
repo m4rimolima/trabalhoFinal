@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
     include '../includes/menu.php';
     ?>
+
 <div class="addbooksLabel">
     <h2 >ADD NEW BOOK</h2>
 </div>
@@ -71,13 +72,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </option>
             <?php endforeach; ?>
         </select>
-
+        <div class="button-container">
         <button type="submit" class="buttonaddbook">ADD NEW BOOK</button>
+        </div>
     </form> 
 </div>
 
-<a href="/trabalhofinal/crud2/addcategory.php" class="signupText">Category doesn't exist? Create one.</a><br>
-<a href="listbooks.php" class="signupText">Back to list.</a>
+<a href="/trabalhofinal/crud2/addcategory.php" class="undertext">Category doesn't exist? Create one.</a><br>
 
 <img src="/trabalhofinal/assets/images/loginBanner.png" class="loginBanner" />
 

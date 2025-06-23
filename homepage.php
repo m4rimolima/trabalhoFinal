@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-// include('protect.php');
+include('protect.php');
 ?>
 
 <!DOCTYPE html>

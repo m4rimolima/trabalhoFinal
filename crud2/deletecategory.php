@@ -8,23 +8,16 @@ try {
     $stmt = $pdo->prepare("DELETE FROM category WHERE id_category = ?");
     $stmt->execute([$idCategory]);
 
-    $_SESSION['msg'] = "Categoria excluída com sucesso!";
-    $_SESSION['msg_type'] = "success";
-
-    header("Location: listcategory.php");
+    header("Location: listcategory.php?msg=success");
     exit;
 
 } catch (PDOException $e) {
     if ($e->getCode() === '23000') {
-        $_SESSION['msg'] = "Lamentamos, mas você não pode apagar uma categoria que está vinculada a um livro.";
-        $_SESSION['msg_type'] = "error";
+        $msg = urlencode("SORRY, YOU CAN'T DELETE A CATEGORY THAT BELONGS TO A BOOK.");
     } else {
-        error_log($e->getMessage());
-        $_SESSION['msg'] = "Erro ao tentar apagar a categoria.";
-        $_SESSION['msg_type'] = "error";
+        $msg = urlencode("ERROR DELETING CATEGORY.");
     }
-
-    header("Location: listcategories.php");
+    header("Location: listcategory.php?error=" . $msg);
     exit;
 }
 ?>

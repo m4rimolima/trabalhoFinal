@@ -17,7 +17,7 @@ include '../includes/menu.php';
 <br>
 <div class="cruds">
     <a class="buttonadd" href="/trabalhofinal/crud1/addbooks.php">NEW BOOK</a>
-    <a class="buttonadd"href="addcategory.php">NEW CATEGORY</a>
+    <a class="buttonadd"href="/trabalhofinal/crud2/addcategory.php">NEW CATEGORY</a>
 </div>
  
 <table border="1">
@@ -57,8 +57,8 @@ foreach ($books as $book):
         <td><?php echo htmlspecialchars($book['pages_books']); ?></td>
         <td><?php echo htmlspecialchars($book['category_name']); ?></td>
         <td>
-            <a href="/trabalhofinal/crud1/updatebooks.php?id=<?php echo $book['id_books']; ?>&id_category=<?php echo $book['id_category']; ?>">Edit</a> |
-            <a href="/trabalhofinal/crud1/deletebooks.php?id=<?php echo $book['id_books']; ?>" onclick="return confirm('delete book?')">Delete</a>
+            <a href="/trabalhofinal/crud1/updatebooks.php?id=<?php echo $book['id_books']; ?>&id_category=<?php echo $book['id_category']; ?>">EDIT</a>
+            <a href="/trabalhofinal/crud1/deletebooks.php?id=<?php echo $book['id_books']; ?>" onclick="return confirm('delete book?')">DELETE</a>
         </td>
     </tr>
 <?php endforeach; ?>
