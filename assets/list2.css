@@ -318,62 +318,81 @@ select:focus {
     filter: brightness(1.2);
 }
 
+
+
 table {
-  position: fixed;
-  top: calc(60px + 50px + 30px); /* navbar + cruds + espaçamento */
-  left: 25px;
-  width: 1705px;
-  max-width: calc(100vw - 50px);
-  border-collapse: collapse;
-  background-color: #2e1d55;
-  font-size: 0.9rem;
-  margin: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-  z-index: 98;
+    width: 95%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #2e1d55;
+    color: #ffffff;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+
+
 }
 
-
-table th,
-table td {
-  padding: 10px 12px;
-  text-align: left;
-  border-bottom: 1px solid #3c2d6c;
+table thead th {
+    background-color: #3a2a66;
+    font-size: 1rem;
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 2px solid #4e3d7b;
 }
 
-table th {
-  background-color: #3a2a66;
-  font-size: 1rem;
+table tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #463373;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #352760;
+}
+
+table tbody tr:hover {
+    background-color: #4a3a83;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
 }
 
 .actions a {
-  text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 0.85em;
-  transition: 0.3s;
-  margin-right: 6px;
-  display: inline-block;
-  color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.85em;
+    transition: 0.3s ease;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .actions .edit {
-  background-color: #7157e0;
+    background: linear-gradient(to right, #7c69f5, #5b4bc7);
+    border: 1px solid #4a3aa1;
 }
 
 .actions .delete {
-  background-color: #7a61e1;
+    background: linear-gradient(to right, #e05472, #b73450);
+    border: 1px solid #912340;
 }
 
 .actions a:hover {
-  filter: brightness(1.1);
+    filter: brightness(1.2);
+    transform: scale(1.05);
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
-
 
 
 .buttonaddbook {
@@ -396,20 +415,26 @@ a {
     background: linear-gradient(to right, #9580cf, #525370);
 }
 
+body {
+  padding-top: 120px; 
+}
+
+
 .cruds {
   position: fixed;
-  top: 60px;                /* exatamente abaixo do menu */
+  top: 60px;             
   left: 0;
   width: 100%;
   display: flex;
   gap: 10px;
   background-color: #4f4a77;
-  padding: 10px 25px;       /* mesma padding horizontal do navbar */
-  box-sizing: border-box;   /* para incluir padding na largura */
+  padding: 10px 25px;      
   justify-content: flex-start;
-  align-items: center;      /* alinha verticalmente os botões */
-  margin: 0;                /* zera margem para não empurrar */
+  align-items: center;      
+  margin: 0;              
   z-index: 99;
+  padding-bottom: 10px;
+  padding-top: 5px;
 }
 
 
@@ -433,5 +458,24 @@ a {
 
 .buttonadd:hover {
     background: linear-gradient(to right, #9580cf, #525370);
+}
+
+body {
+  margin: 0;
+  padding-top: 60px; 
+  font-family: 'Playfair Display', serif;
+  background-color: #291d46;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.bodylistbooks {
+    background-color: rgb(41, 29, 70);
+    min-height: calc(100vh - 60px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;     
+    box-shadow: 0 0 10px #00000070;
 }
 

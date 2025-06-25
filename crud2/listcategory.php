@@ -31,30 +31,36 @@ try {
     <title>CATEGORIES</title>
 </head>
 <body>
-    <h2 class="editLabel">EDIT CATEGORY</h2>
+
     <br>
     <div class="cruds">
         <a class="buttonadd" href="/trabalhofinal/crud1/addbooks.php">NEW BOOK</a>
         <a class="buttonadd" href="/trabalhofinal/crud2/addcategory.php">NEW CATEGORY</a>
     </div>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Descrição</th>
-            <th>Ações</th>
-        </tr>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
         <?php foreach ($categories as $category): ?>
             <tr>
                 <td><?= $category['id_category'] ?></td>
-                <td><?= htmlspecialchars($category['category_name']) ?></td>
+                <td class="name-column"><?= htmlspecialchars($category['category_name']) ?></td>
                 <td><?= htmlspecialchars($category['category_description']) ?></td>
-                <td>
-                    <a href="/trabalhofinal/crud2/updatecategory.php?id=<?= $category['id_category'] ?>">EDIT</a>
-                    <a href="/trabalhofinal/crud2/deletecategory.php?id=<?= $category['id_category'] ?>" onclick="return confirm('DELETE CATEGORY?')">DELETE</a>
+                <td class="actions">
+                    <a href="/trabalhofinal/crud2/updatecategory.php?id=<?= $category['id_category'] ?>" class="edit">EDIT</a>
+                    <a href="/trabalhofinal/crud2/deletecategory.php?id=<?= $category['id_category'] ?>" class="delete" onclick="return confirm('DELETE CATEGORY?')">DELETE</a>
                 </td>
             </tr>
         <?php endforeach; ?>
+        </tbody>
     </table>
+
 </body>
 </html>

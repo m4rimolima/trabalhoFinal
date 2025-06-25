@@ -1,8 +1,6 @@
-
 <?php
 include '../conexao.php';
 include '../includes/menu.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,55 +11,59 @@ include '../includes/menu.php';
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>LIST BOOKS</title>
 </head>
-<body class="bodySignUp">
-<br>
-<div class="cruds">
-    <a class="buttonadd" href="/trabalhofinal/crud1/addbooks.php">NEW BOOK</a>
-    <a class="buttonadd"href="/trabalhofinal/crud2/addcategory.php">NEW CATEGORY</a>
-</div>
- 
-<table border="1">
-<tr>
-    <th>ID</th>
-    <th>TITLE</th>
-    <th>AUTHOR</th>
-    <th>PUBLISHING DATE</th>
-    <th>NUMBER OF PAGES</th>
-    <th>CATEGORY</th>
-    <th>ACTIONS</th>
-</tr>
+<body class="bodylistbooks">
+
+    <br>
+    <div class="cruds">
+        <a class="buttonadd" href="/trabalhofinal/crud1/addbooks.php">NEW BOOK</a>
+        <a class="buttonadd" href="/trabalhofinal/crud2/addcategory.php">NEW CATEGORY</a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>AUTHOR</th>
+                <th>PUBLISHING DATE</th>
+                <th>NUMBER OF PAGES</th>
+                <th>CATEGORY</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        $stmt = $pdo->query(
+            "SELECT 
+                books.id_books,
+                books.title_books,
+                books.author_books,
+                books.date_books,
+                books.pages_books,
+                category.category_name,
+                category.id_category
+            FROM books
+            INNER JOIN category ON books.id_category = category.id_category"
+        );
+
+        $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($books as $book):
+        ?>
+            <tr>
+                <td><?= $book['id_books']; ?></td>
+                <td class="name-column"><?= htmlspecialchars($book['title_books']); ?></td>
+                <td><?= htmlspecialchars($book['author_books']); ?></td>
+                <td><?= htmlspecialchars($book['date_books']); ?></td>
+                <td><?= htmlspecialchars($book['pages_books']); ?></td>
+                <td><?= htmlspecialchars($book['category_name']); ?></td>
+                <td class="actions">
+                    <a href="/trabalhofinal/crud1/updatebooks.php?id=<?= $book['id_books']; ?>&id_category=<?= $book['id_category']; ?>" class="edit">EDIT</a>
+                    <a href="/trabalhofinal/crud1/deletebooks.php?id=<?= $book['id_books']; ?>" class="delete" onclick="return confirm('DELETE BOOK?')">DELETE</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+
 </body>
 </html>
-<?php
-$stmt = $pdo->query(
-    "SELECT 
-        books.id_books,
-        books.title_books,
-        books.author_books,
-        books.date_books,
-        books.pages_books,
-        category.category_name,
-        category.id_category
-    FROM books
-    INNER JOIN category ON books.id_category = category.id_category
-");
-
-$books = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach ($books as $book):
-?>
-    <tr>
-        <td><?php echo $book['id_books']; ?></td>
-        <td><?php echo htmlspecialchars($book['title_books']); ?></td>
-        <td><?php echo htmlspecialchars($book['author_books']); ?></td>
-        <td><?php echo htmlspecialchars($book['date_books']); ?></td>
-        <td><?php echo htmlspecialchars($book['pages_books']); ?></td>
-        <td><?php echo htmlspecialchars($book['category_name']); ?></td>
-        <td>
-            <a href="/trabalhofinal/crud1/updatebooks.php?id=<?php echo $book['id_books']; ?>&id_category=<?php echo $book['id_category']; ?>">EDIT</a>
-            <a href="/trabalhofinal/crud1/deletebooks.php?id=<?php echo $book['id_books']; ?>" onclick="return confirm('delete book?')">DELETE</a>
-        </td>
-    </tr>
-<?php endforeach; ?>
-</table>
-
-

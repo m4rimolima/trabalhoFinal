@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,19 +7,24 @@
     font-family: 'Playfair Display', serif;
 }
 
-.bodySignUp {
-    background-color: #241939;
-    height: 100vh ;
-    display: flex ;
-    box-shadow: 0 0 10px #00000070 ;
-    flex-direction: column ;
-    justify-content: center ;
-    align-items: flex-start ;
-    padding-left: 300px ;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #291d46;
+    color: #ffffff;
 }
 
-
-
+.bodySignUp {
+    background-color: #241939;
+    height: 100vh;
+    display: flex;
+    box-shadow: 0 0 10px #00000070;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 300px;
+}
 
 .signUpBox {
     background-color: #443A56;
@@ -25,8 +32,6 @@
     border-radius: 10px;
     box-shadow: 0 0 10px #00000070;
     width: 350px;
-
-    
 }
 
 .signUpLabel {
@@ -34,8 +39,7 @@
     margin-bottom: 20px;
     font-weight: bolder;
     letter-spacing: 1px;
-    margin-left:80px ;
-
+    margin-left: 80px;
 }
 
 .inputBox {
@@ -47,14 +51,16 @@
     border: 3px solid #9a85c9;
     border-radius: 8px;
     background-color: transparent;
-    color:#bab4ee;
+    color: #bab4ee;
     font-size: medium;
 }
 
-
-.buttonSign {
+.buttonSign,
+.buttonedit,
+.buttonaddbook,
+.logoutButton,
+.buttonadd {
     margin-top: 10px;
-    width: 95px ;
     padding: 10px;
     background: linear-gradient(to right, #a89ccf, #716c99);
     border: none;
@@ -63,28 +69,70 @@
     font-weight: bolder;
     cursor: pointer;
     font-family: 'Playfair Display', serif;
-    flex-direction: column;
-    align-items: center;
-
+    text-align: center;
 }
 
-.buttonSign:hover {
+.buttonSign:hover,
+.buttonedit:hover,
+.buttonaddbook:hover,
+.buttonadd:hover {
     background: linear-gradient(to right, #9580cf, #525370);
 }
 
-.signupText {
+.buttonSign {
+    width: 95px;
+}
+
+.logoutButton {
+    width: 95px;
+    text-decoration: none;
+}
+
+.buttonaddbook {
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonedit {
+    width: 95px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonadd {
+    width: 150px;
+    padding: 3px;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+
+.signupText,
+.voltar,
+.undertext {
     margin-top: 15px;
     margin-bottom: 15px;
     color: #D7D0FA;
-    font-size: 12px;
+    font-size: large;
     background-color: transparent;
-    border: 0cap;
+    border: none;
+    text-decoration: none;
     align-items: center;
     flex-direction: column;
-    margin-left: 15px;
-    font-size: large;
-    text-decoration: none;
+}
 
+.signupText {
+    margin-left: 15px;
+}
+
+.voltar {
+    margin-left: 140px;
+}
+
+.undertext {
+    margin-left: 25px;
 }
 
 .loginBanner {
@@ -95,58 +143,36 @@
     width: auto;
     object-fit: cover;
     z-index: 10;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
-
-
-
-.message{
+.message {
     background-color: #443A56;
     color: #bab4ee;
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 5px;
-
-
-
 }
 
-.homepage{
-       background-color: #241939;
-       color: #bab4ee;
-       justify-content: center;
-       align-items: center;
-       display: flex;
-       flex-direction: column;
-       margin-top: 300px;
+.homepage {
+    background-color: #241939;
+    color: #bab4ee;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
 }
 
-.h1Homepage{
+.h1Homepage {
     font-size: 50px;
 }
 
-.logoutButton{
-    margin-top: 10px;
-    width: 95px ;
-    padding: 10px;
-    background: linear-gradient(to right, #a89ccf, #716c99);
-    border: none;
-    border-radius: 8px;
-    color: #1c1230;
-    font-family: 'Playfair Display', serif;
-    align-items: center;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-}
-
-
-.labels{
+.labels {
     display: flex;
     align-items: flex-start;
     font-weight: bold;
-    color: #dcd4f2
+    color: #dcd4f2;
 }
 
 .addbooksLabel {
@@ -158,59 +184,15 @@
     margin-top: 180px;
 }
 
-
-.buttonaddbook {
-    margin-top: 10px;
-    width: 95px ;
-    padding: 10px;
-    background: linear-gradient(to right, #a89ccf, #716c99);
-    border: none;
-    border-radius: 8px;
-    color: #1c1230;
-    font-weight: bolder;
-    cursor: pointer;
-    font-family: 'Playfair Display', serif;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.buttonaddbook:hover {
-    background: linear-gradient(to right, #9580cf, #525370);
-}
-
 .editLabel {
     color: #dcd4f2;
-    margin-top: 80px; 
+    margin-top: 80px;
     margin-bottom: 20px;
-    margin-left: 75px;
+    margin-left: 93px;
     font-weight: bolder;
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
-}
-
-
-
-.buttonedit {
-    margin-top: 10px;
-    width: 95px ;
-    padding: 10px;
-    background: linear-gradient(to right, #a89ccf, #716c99);
-    border: none;
-    border-radius: 8px;
-    color: #1c1230;
-    font-weight: bolder;
-    cursor: pointer;
-    font-family: 'Playfair Display', serif;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.button:hover {
-    background: linear-gradient(to right, #9580cf, #525370);
 }
 
 .button-container {
@@ -221,15 +203,14 @@
 
 .bodyedit {
     background-color: #241939;
-    height: 100vh ;
-    display: flex ;
-    box-shadow: 0 0 10px #00000070 ;
-    flex-direction: column ;
-    justify-content: center ;
-    align-items: flex-start ;
-    padding-left: 450px ;
+    height: 100vh;
+    display: flex;
+    box-shadow: 0 0 10px #00000070;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 450px;
 }
-
 
 .addcategoryLabel {
     color: #dcd4f2;
@@ -237,18 +218,6 @@
     font-weight: bolder;
     letter-spacing: 1px;
     margin-left: 45px;
-}
-
-
-
-
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Playfair Display', serif;
-    background-color: #291d46;
-    color: #ffffff;
 }
 
 .container {
@@ -267,7 +236,6 @@ h1 {
     font-size: 2.2em;
     margin-bottom: 30px;
 }
-
 
 .form-group {
     display: flex;
@@ -320,76 +288,78 @@ select:focus {
 }
 
 table {
-    width: 97%;
-    border-collapse: collapse;
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 0;
     background-color: #2e1d55;
-    overflow: hidden;
     color: #ffffff;
-    font-size: 0.9rem;
-    margin-top: 20px;
-    margin-left: 25px;
-
+    font-size: 0.95rem;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-table th,
-table td {
-    padding: 10px 12px;
-    text-align: left;
-    border-bottom: 1px solid #3c2d6c;
-}
-
-table th {
+table thead th {
     background-color: #3a2a66;
     font-size: 1rem;
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 2px solid #4e3d7b;
 }
 
+table tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #463373;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #352760;
+}
+
+table tbody tr:hover {
+    background-color: #4a3a83;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Ações (botões lado a lado) */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botões Edit e Delete */
 .actions a {
     text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
     font-size: 0.85em;
-    transition: 0.3s;
-    margin-right: 6px;
-    display: inline-block;
+    transition: 0.3s ease;
     color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .actions .edit {
-    background-color: #7157e0;
+    background: linear-gradient(to right, #7c69f5, #5b4bc7);
+    border: 1px solid #4a3aa1;
 }
 
 .actions .delete {
-    background-color: #7a61e1;
+    background: linear-gradient(to right, #e05472, #b73450);
+    border: 1px solid #912340;
 }
 
 .actions a:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.2);
+    transform: scale(1.05);
 }
 
+/* Link padrão */
 a {
     text-decoration: none;
     color: inherit;
-}
-
-
-.buttonaddbook {
-    margin-top: 10px;
-    width: 95px ;
-    padding: 10px;
-    background: linear-gradient(to right, #a89ccf, #716c99);
-    border: none;
-    border-radius: 8px;
-    color: #1c1230;
-    font-weight: bolder;
-    cursor: pointer;
-    font-family: 'Playfair Display', serif;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.buttonaddbook:hover {
-    background: linear-gradient(to right, #9580cf, #525370);
 }
 
 
@@ -398,64 +368,6 @@ a {
     display: flex;
     gap: 10px;
     background-color: #4f4a77;
-    padding-top: -20px;
-    display: flex;
     padding-bottom: 10px;
-    margin-top: -23px;
-    
-
+    margin-top: 40px;
 }
-
-
-.buttonadd {
-    margin-top: 10px;
-    margin-bottom: 1px ;
-    margin-left: 25px ;
-    width: 150px ;
-    padding: 3px;
-    background: linear-gradient(to right, #a89ccf, #716c99);
-    border: none;
-    border-radius: 5px;
-    color: #1c1230;
-    font-weight: bolder;
-    cursor: pointer;
-    font-family: 'Playfair Display', serif;
-  
-    text-align: center;
-
-}
-
-.buttonadd:hover {
-    background: linear-gradient(to right, #9580cf, #525370);
-}
-
-.voltar {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #D7D0FA;
-    font-size: 12px;
-    background-color: transparent;
-    border: 0cap;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 140px;
-    font-size: large;
-    text-decoration: none;
-
-}
-
-.undertext {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #D7D0FA;
-    font-size: 12px;
-    background-color: transparent;
-    border: 0cap;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 25px;
-    font-size: large;
-    text-decoration: none;
-
-}
-
