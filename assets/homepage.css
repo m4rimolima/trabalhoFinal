@@ -1,0 +1,67 @@
+body.homepage {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #1a0b2e, #2d1c4a);
+    color: #f2f2f2;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepageBanner {
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #292236, #150a2d);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    
+}
+
+
+.subBanner {
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #20123A, #190F2D, #1E0F3A);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    
+}
+
+.booksBanner {
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #261E37);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    
+}
+
+
+.welcomeMessage {
+    margin-top: 70px;
+    margin-left: 80px;
+    align-self: flex-start;
+    font-size: 1.2rem;
+    color: #d4bfff;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(212, 191, 255, 0.15);
+    max-width: 90%;
+}

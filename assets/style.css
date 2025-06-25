@@ -182,15 +182,15 @@
 
 .editLabel {
     color: #dcd4f2;
+    margin-top: 80px; 
     margin-bottom: 20px;
+    margin-left: 75px;
     font-weight: bolder;
     letter-spacing: 1px;
-    margin-left:75px ;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-
 }
+
 
 
 .buttonedit {
@@ -241,7 +241,7 @@
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 
 body {
     margin: 0;
