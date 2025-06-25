@@ -1,6 +1,7 @@
 <?php
 include '../conexao.php';
 include '../includes/menu.php';
+include('../protect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

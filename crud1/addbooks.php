@@ -1,6 +1,6 @@
 <?php
 include '../conexao.php';
-
+include('../protect.php');
 
 $stmtCat = $pdo->query("SELECT id_category, category_name FROM category");
 $categories = $stmtCat->fetchAll(PDO::FETCH_ASSOC);

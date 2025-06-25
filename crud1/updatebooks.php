@@ -1,7 +1,7 @@
 <?php
 include '../conexao.php';
 include '../includes/menu.php';
-
+include('../protect.php');
 $id_books = $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
