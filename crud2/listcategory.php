@@ -17,7 +17,7 @@ try {
     $stmt = $pdo->query("SELECT * FROM category");
     $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    echo "<p style='color:red;'>Erro ao buscar categorias: " . htmlspecialchars($e->getMessage()) . "</p>";
+    echo "<p style='color:red;'>Couldn't find categories: " . htmlspecialchars($e->getMessage()) . "</p>";
     $categories = []; 
 }
 ?>
