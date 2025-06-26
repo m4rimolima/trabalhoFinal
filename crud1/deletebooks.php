@@ -16,6 +16,6 @@ if ($stmt->execute()) {
     header("Location: listbooks.php"); 
     exit;
 } else {
-    echo "Erro ao excluir o livro.";
+    echo "Couldn't delete book.";
 }
 ?>
