@@ -1,6 +1,7 @@
 <?php
 include '../conexao.php';
 include '../includes/menu.php';
+include('../protect.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];

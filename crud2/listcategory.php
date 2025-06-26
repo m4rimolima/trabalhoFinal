@@ -2,8 +2,8 @@
 session_start();
 include '../conexao.php';
 include '../includes/menu.php';
+include('../protect.php');
 
-// Exibir popup com mensagem de erro ou sucesso via GET
 if (isset($_GET['error'])) {
     $jsMsg = addslashes($_GET['error']);
     echo "<script>alert('$jsMsg');</script>";
