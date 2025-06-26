@@ -2,7 +2,7 @@
 include '../conexao.php';
 
 if (!isset($_GET['id']) || empty($_GET['id'])) {
-    echo "ID do livro não fornecido.";
+    echo "Book id was not defined.";
     exit;
 }
 
